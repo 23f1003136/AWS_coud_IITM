@@ -1,0 +1,307 @@
+.events-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.events-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.events-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.events-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #555;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-button.active {
+    background-color: rgba(0, 119, 182, 0.1);
+    color: rgb(255,153,0);
+    font-weight: 600;
+    border-left: 3px solid rgb(255,153,0);
+}
+
+.events-section {
+    margin-bottom: 3rem;
+}
+
+.events-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.coming-soon {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    color: #666;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.event-overview {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.learn-more-button {
+    background-color: #f97316;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #fb923c;
+}
+
+.event-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.modal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-details p {
+    display: flex;
+    gap: 0.5rem;
+    color: #555;
+}
+
+.modal-details span {
+    font-weight: 600;
+    color: #333;
+}
+
+.modal-overview {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.modal-overview h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.modal-overview p {
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .events-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    } }
+
+        /* Add these styles to your existing Events.css */
+    
+        /* Image container styles */
+        .event-image-container {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+    
+        .event-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    
+        .event-card:hover .event-image {
+            transform: scale(1.05);
+        }
+    
+        /* Tag styles */
+        .event-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            flex-wrap: wrap;
+        }
+    
+        .event-tag {
+            background: #e1f0fa;
+            color: #0077b6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+    
+        /* Modal image styles */
+        .modal-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+    
+        .modal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        /* Modal tag styles */
+        .modal-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+    
+        .modal-tag {
+            background: #e1f0fa;
+            color: #0077b6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    
+        /* Adjust existing card padding to account for image */
+        .event-card {
+            padding: 0;
+            /* Remove padding from card, add to inner content */
+        }
+    
+        .event-card-content {
+            padding: 1.5rem;
+        }
+    
+        /* Error handling for missing images */
+        .event-image-container img[src=""],
+        .event-image-container img:not([src]) {
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.8rem;
+        }
+    
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .event-image-container {
+                height: 150px;
+            }
+    
+            .modal-image-container {
+                height: 200px;
+            } }
